@@ -3,11 +3,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
 public class TestJava {
-    public static void main(String[] args) {
-        WebDriver driver = new FirefoxDriver();
-    }
+
     @Test
-    public void sampleTest(){
-        System.out.println("to jest test");
+    public void openGoogle(){
+        System.setProperty("webdriver.gecko.driver","C:\\Users\\Elixia\\Downloads\\geckodriver.exe");
+        WebDriver driver = new FirefoxDriver();
+        driver.get("https://www.google.com");
     }
 }
